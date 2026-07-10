@@ -1,4 +1,4 @@
-package aulas;
+package atividades.atividade1;
 
 import java.util.Scanner;
 
