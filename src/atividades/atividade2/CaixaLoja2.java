@@ -38,7 +38,7 @@ class Calculo{
     }
 }
 
-public class CaixaLoja {
+public class CaixaLoja2 {
 
     public static void main(String[] args) {
 
