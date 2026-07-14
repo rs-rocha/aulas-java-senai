@@ -2,7 +2,7 @@ package atividades.atividade2;
 
 import java.util.Scanner;
 
-class Calculo{
+class Calculo2{
 
     public double Desconto(double valorCompra) {
         final double DESCONTO_ZERO = 0.0;
@@ -45,7 +45,6 @@ public class CaixaLoja2 {
         double poupado;
         double montante;
         double valorCompra;
-        double desconto;
         String valorCompraStr;
 
         Scanner sc = new Scanner(System.in);
@@ -55,7 +54,7 @@ public class CaixaLoja2 {
         valorCompra = Double.parseDouble(valorCompraStr);
 
         //COMENTANDO PARA USAR SWITCH-CASE
-        Calculo c = new Calculo();
+        Calculo2 c = new Calculo2();
 
         poupado = valorCompra * c.Desconto(valorCompra);
         montante = valorCompra - poupado;

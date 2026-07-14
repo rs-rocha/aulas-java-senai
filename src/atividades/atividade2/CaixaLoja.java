@@ -2,16 +2,19 @@ package atividades.atividade2;
 
 import java.util.Scanner;
 
-public class CaixaLoja {
+class Calculo{
 
-    public static void imprimir(double valorCompra, double poupado, double montante){
+    public void imprimir(double valorCompra, double poupado, double montante){
         System.out.println(
                 "Valor Original: " + valorCompra +
-                "\nValor Poupado: " + poupado +
-                "\nMontante Final:  " + montante
-                );
-
+                        "\nValor Poupado: " + poupado +
+                        "\nMontante Final:  " + montante
+        );
     }
+}
+
+public class CaixaLoja {
+
     public static void main(String[] args) {
 
         double poupado;
@@ -25,18 +28,20 @@ public class CaixaLoja {
         valorCompraStr = sc.nextLine();
         valorCompra = Double.parseDouble(valorCompraStr);
 
+        Calculo c = new Calculo();
+
         if(valorCompra < 100.0){
             poupado = 0.0 * valorCompra;
             montante = valorCompra - poupado;
-            imprimir(valorCompra, poupado, montante);
+            c.imprimir(valorCompra, poupado, montante);
         } else if (valorCompra < 299.99){
             poupado = 0.1 * valorCompra;
             montante = valorCompra - poupado;
-            imprimir(valorCompra, poupado, montante);
+            c.imprimir(valorCompra, poupado, montante);
         } else {
             poupado = 0.2 * valorCompra;
             montante = valorCompra - poupado;
-            imprimir(valorCompra, poupado, montante);
+            c.imprimir(valorCompra, poupado, montante);
         }
     }
 }
