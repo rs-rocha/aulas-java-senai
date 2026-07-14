@@ -29,5 +29,13 @@ public class SistemaDeMonitoramentoClimatico {
         temperatura = Double.parseDouble(temperaturaStr);
 
         avaliarClima(converterParaFahrenheit(temperatura));
+
+
+        //chama como se fosse um while
+        System.out.println("Digite uma opção: ");
+        int opcao = sc.nextInt();
+        if(opcao == 1) {
+            main(args);
+        }
     }
 }
