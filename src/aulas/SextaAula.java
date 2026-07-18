@@ -5,9 +5,8 @@ import aulas.objeto.Pessoa;
 
 public class SextaAula {
     public static void main(String[] args) {
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.nome = "Joao";
+        Pessoa pessoa1 = new Pessoa("Joao", 2004, 'M', "Branca");
 
-        System.out.println(pessoa1.nome);
+        System.out.println(pessoa1);
     }
 }
