@@ -1,6 +1,7 @@
 package atividades.atividade6;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -26,14 +27,14 @@ public class MelhoriaDeTarefas{
 
         while (true) {
             System.out.println(
-                    "*********** - Menu - ***********" +
+                    "\n\n*********** - Menu - ***********" +
                     "\n1 - Cadastrar Tarefas" +
                     "\n2 - Visualizar Tarefas" +
                     "\n3 - Ordenar Tarefas" +
                     "\n4 - Retirar Tarefas" +
                     "\n5 - Registrar Tarefas Feitas" +
                     "\n0 - Para encerrar." +
-                    "\n*********** - **** - ***********"
+                    "\n*********** - **** - ***********\n\n"
                 );
             System.out.println("Digite uma opção e aperte enter: ");
             int opcao = Integer.parseInt(scanner.nextLine());
@@ -88,14 +89,18 @@ public class MelhoriaDeTarefas{
 }
 
 class Tarefas{
+    ArrayList<String> myListaOriginal;
+    ArrayList<String> myLista;
 
     public void ordenar(ArrayList<String> myLista){
+        this.myListaOriginal = myLista;
         System.out.println("Lista ordenada");
-        //System.out.println(myLista.sort());
+        Collections.sort(myLista);;
+        System.out.println(myLista);
     }
     public void retirarTarefa(ArrayList<String> myLista) {
         System.out.println(
-                "**** Retirando tarefa ****" +
+                "**** Escolha o método: ****" +
                 "\n1.Metodo Fifo" +
                 "\n2.Metodo Fefo" +
                 "\n3.Metodo Lifo"
@@ -107,29 +112,45 @@ class Tarefas{
             case 1:
                 System.out.println("Vc escolheu metodo Fifo");
                 metodoFifo(myLista);
-
                 break;
+
             case 2:
                 System.out.println("Vc escolheu metodo Fefo");
                 metodoFefo(myLista);
                 break;
+
             case 3:
                 System.out.println("Vc escolheu metodo Lifo");
                 metodoLifo(myLista);
                 break;
+
             default:
                 System.out.println("Saindo dos Metodos");
                 break;
         }
     }
     public void metodoFifo(ArrayList<String> myLista){
-        System.out.println("Dentro do Metodo Fifo");
+        System.out.println("\n**************FIFO*******************");
+        System.out.println("Retirando a primeira tarefa: ");
+        myLista.removeFirst();
+        System.out.println("Tarefas atuais: ");
+        System.out.println(myLista);
+
     }
     public void metodoFefo(ArrayList<String> myLista){
-        System.out.println("Dentro do Metodo Fefo");
+        System.out.println("\n**************FEFO*******************");
+        System.out.println("Ordenando por ordem alfabetico:");
+        ordenar(myLista);
+        System.out.println("Removendo a primeira tarefa:");
+        myLista.removeFirst();
+        ordenar(myLista);
     }
     public void metodoLifo(ArrayList<String> myLista){
-        System.out.println("Dentro do Metodo Lifo");
+        System.out.println("\n*************LIFO*******************");
+        System.out.println("Removendo o ultimo da pilha: ");
+        myLista.removeLast();
+        System.out.println(myLista);
+
     }
     public void registrar(ArrayList<String> myLista){
         System.out.println("Dentro do método Registrar");
