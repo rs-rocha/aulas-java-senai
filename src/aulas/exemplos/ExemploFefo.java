@@ -3,7 +3,7 @@ package aulas.exemplos;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ExemploFEFO {
+public class ExemploFefo {
     public static void main(String[] args) {
         ArrayList<String> estoque = new ArrayList<>();
 
