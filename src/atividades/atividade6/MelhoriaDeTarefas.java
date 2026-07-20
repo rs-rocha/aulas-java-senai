@@ -91,7 +91,7 @@ class Tarefas{
 
     public void ordenar(ArrayList<String> myLista){
         System.out.println("Lista ordenada");
-        System.out.println(myLista.sort());
+        //System.out.println(myLista.sort());
     }
     public void retirarTarefa(ArrayList<String> myLista) {
         System.out.println(
