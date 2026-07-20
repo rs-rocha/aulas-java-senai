@@ -1,3 +1,5 @@
+package atividades.atividade6;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -95,7 +97,8 @@ class Tarefas{
         System.out.println("Lista ordenada");
     }
     public void retirarTarefa(ArrayList<String> myLista) {
-        System.out.println("**** Retirando tarefa ****" +
+        System.out.println(
+                "**** Retirando tarefa ****" +
                 "\n1.Metodo Fifo" +
                 "\n2.Metodo Fefo" +
                 "\n3.Metodo Lifo"
