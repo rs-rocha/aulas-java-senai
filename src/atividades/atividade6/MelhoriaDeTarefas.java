@@ -32,25 +32,29 @@ public class MelhoriaDeTarefas{
                     "\nfim - Para encerrar." +
                     "\n*********** - **** - ***********"
                 );
-
+            System.out.println("Digite uma opção e aperte enter: ");
             int opcao = Integer.parseInt(scanner.nextLine());
 
             switch (opcao) {
                 case 1:
-                    System.out.println("");
+                    System.out.println("**** Cadastrar Tarefas ****");
                     break;
 
                 case 2:
+                    System.out.println("**** Visualizar Tarefas ****");
                     break;
 
                 case 3:
+                    System.out.println("**** Ordenar Tarefas ****");
                     break;
 
                 case 4:
+                    System.out.println("**** Retirar Tarefas ****");
 
                     break;
 
                 case 5:
+                    System.out.println("**** Registrar Tarefas Feitas ****");
                     break;
 
                 default:
@@ -82,18 +86,18 @@ public class MelhoriaDeTarefas{
 
 class Tarefas{
     public void ordenar(ArrayList<String> tarefas){
-
+        System.out.println("Lista ordenada");
     }
     public void metodoFifo(ArrayList<String> tarefas){
-
+        System.out.println("Metodo Fifo");
     }
     public void metodoFefo(ArrayList<String> tarefas){
-
+        System.out.println("Metodo Fefo");
     }
     public void metodoLifo(ArrayList<String> tarefas){
-
+        System.out.println("Metodo Lifo");
     }
     public void registrar(ArrayList<String> tarefas){
-
+        System.out.println("Registrar");
     }
 }
