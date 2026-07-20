@@ -30,7 +30,7 @@ public class MelhoriaDeTarefas{
                     "\n3 - Ordenar Tarefas" +
                     "\n4 - Retirar Tarefas" +
                     "\n5 - Registrar Tarefas Feitas" +
-                    "\nfim - Para encerrar." +
+                    "\n0 - Para encerrar." +
                     "\n*********** - **** - ***********"
                 );
             System.out.println("Digite uma opção e aperte enter: ");
@@ -61,8 +61,9 @@ public class MelhoriaDeTarefas{
                     t.registrar(tarefas);
                     break;
 
-                default:
-                    break;
+                case 0:
+                    System.out.println("--Saindo do Sistema--");
+                    return;
             }
             /*
             System.out.print("Nova tarefa: ");
@@ -105,23 +106,21 @@ class Tarefas{
         switch (opcao){
             case 1:
                 System.out.println("Vc escolheu metodo Fifo");
-                metodoFifo();
+                metodoFifo(myLista);
 
                 break;
             case 2:
                 System.out.println("Vc escolheu metodo Fefo");
-                metodoFefo();
+                metodoFefo(myLista);
                 break;
             case 3:
                 System.out.println("Vc escolheu metodo Lifo");
-                metodoLifo();
+                metodoLifo(myLista);
                 break;
             default:
                 System.out.println("Saindo dos Metodos");
                 break;
         }
-
-
     }
     public void metodoFifo(ArrayList<String> myLista){
         System.out.println("Dentro do Metodo Fifo");
