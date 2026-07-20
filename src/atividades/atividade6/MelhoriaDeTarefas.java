@@ -40,12 +40,28 @@ public class MelhoriaDeTarefas{
 
             switch (opcao) {
                 case 1:
-                    System.out.println("**** Cadastrar Tarefas ****");
+                    String incluirTarefa;
+                    while(true){
+                        System.out.println("**** Cadastrar Tarefas ****");
+                        System.out.print("Nova tarefa: ");
+                        tarefas.add(scanner.nextLine());
 
+                        System.out.println("Quer adicionar mais alguma tarefa? (digite 'fim' para " +
+                                "finalizar o programa)");
+                        incluirTarefa = scanner.nextLine();
+
+                        if (incluirTarefa.equals("fim")){
+                            break;
+                        }
+                    }
                     break;
 
                 case 2:
                     System.out.println("**** Visualizar Tarefas ****");
+                    System.out.println("Tarefas salvas:");
+                    for (int i = 0; i < tarefas.size(); i++) {
+                        System.out.println("Tarefa nº"+(i+1)+" "+tarefas.get(i));
+                    }
                     break;
 
                 case 3:
@@ -67,26 +83,6 @@ public class MelhoriaDeTarefas{
                     System.out.println("--Saindo do Sistema--");
                     return;
             }
-            /*
-            System.out.print("Nova tarefa: ");
-            tarefas.add(scanner.nextLine());
-
-            System.out.println("Quer adicionar mais alguma tarefa? (digite 'fim' para " +
-                    "finalizar o programa)");
-            String opcao = scanner.nextLine();
-
-            if (opcao.equals("fim")){
-                break;
-            }
-
-
-        }
-        System.out.println("Tarefas salvas:");
-        for (int i = 0; i < tarefas.size(); i++) {
-            System.out.println("Tarefa nº"+(i+1)+" "+tarefas.get(i));
-        }
-        t.ordenar(tarefas);
-        */
         }
     }
 }
@@ -95,6 +91,7 @@ class Tarefas{
 
     public void ordenar(ArrayList<String> myLista){
         System.out.println("Lista ordenada");
+        System.out.println(myLista.sort());
     }
     public void retirarTarefa(ArrayList<String> myLista) {
         System.out.println(
