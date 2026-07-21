@@ -46,10 +46,10 @@ public class ContaBancaria {
 
     @Override
     public String toString() {
-        return "ContaBancaria{" +
-                "titular='" + titular + '\'' +
-                ", numeroDaConta=" + numeroDaConta +
-                ", saldo=" + saldo +
-                '}';
+        return "ContaBancaria = [" +
+                "titular: '" + titular + '\'' +
+                ", numeroDaConta: " + numeroDaConta +
+                ", saldo: " + saldo +
+                ']';
     }
 }
