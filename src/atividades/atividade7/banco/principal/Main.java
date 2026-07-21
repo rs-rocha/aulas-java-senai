@@ -1,6 +1,6 @@
-package aulas.encapsulamento.banco.principal;
+package atividades.atividade7.banco.principal;
 
-import aulas.encapsulamento.banco.modelo.ContaBancaria;
+import atividades.atividade7.banco.modelo.ContaBancaria;
 
 public class Main {
     public static void main(String[] args) {

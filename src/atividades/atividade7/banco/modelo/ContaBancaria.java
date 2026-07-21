@@ -1,4 +1,4 @@
-package aulas.encapsulamento.banco.modelo;
+package atividades.atividade7.banco.modelo;
 
 
 public class ContaBancaria {
