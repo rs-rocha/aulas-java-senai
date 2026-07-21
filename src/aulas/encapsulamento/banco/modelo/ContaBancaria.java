@@ -19,13 +19,8 @@ public class ContaBancaria {
     }
 
     //metodos getters e setters
-
     public String getTitular() {
         return titular;
-    }
-
-    public void setTitular(String titular) {
-        this.titular = titular;
     }
 
     public double getSaldo() {
