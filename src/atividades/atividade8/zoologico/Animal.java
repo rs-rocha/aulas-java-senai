@@ -1,6 +1,7 @@
 package atividades.atividade8.zoologico;
 
 public class Animal {
+
     private String nome;
     private double peso;
     private String setorNoZoo;
