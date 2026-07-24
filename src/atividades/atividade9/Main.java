@@ -18,7 +18,8 @@ public class Main {
         String padrao = "";
 
         while(true){
-            System.out.println("\nTamanho da Lista de Cadastro incompleto: " + listaCadastroIncompleto.size());
+            System.out.println("\nTamanho da Lista de Cadastro INCOMPLETO: " + listaCadastroIncompleto.size());
+            System.out.println("\nTamanho da Lista de Cadastro Completo: " + listaCadastroCompleto.size());
             System.out.println(
                     "\n**** CADASTRO DE PESSOAS ****" +
                     "\n1.Cadastro de Pessoa: " +
@@ -32,14 +33,19 @@ public class Main {
                 nome = sc.nextLine();
                 System.out.println("Deseja digitar a idade? (s ou n)");
                 escolha = sc.nextLine();
+
                 if (escolha.equalsIgnoreCase("s")){
                     System.out.println("Digite a idade: ");
                     idade = Integer.parseInt(sc.nextLine());
                     padrao += escolha;
 
-                } else {
+                } else if(escolha.equalsIgnoreCase("n")){
                     padrao += escolha;
+
+                } else {
+                    System.out.println("Apenas s ou n!");
                 }
+
                 System.out.println("Deseja digitar a cargo? (s ou n)");
                 escolha = sc.nextLine();
 
@@ -47,27 +53,31 @@ public class Main {
                     System.out.println("Digite a cargo: ");
                     cargo = sc.nextLine();
                     padrao += escolha;
-                } else {
+
+                } else if(escolha.equalsIgnoreCase("n")){
                     padrao += escolha;
+
+                } else {
+                    System.out.println("Apenas s ou n!");
                 }
 
                 if(padrao.equalsIgnoreCase("ss")){
-                    System.out.println("ss: "+padrao.equalsIgnoreCase("ss"));
+                    //System.out.println("ss: "+padrao.equalsIgnoreCase("ss"));
                     Cadastro pessoa = new Cadastro(nome, idade, cargo, true);
                     listaCadastroCompleto.add(pessoa);
                 }
                 if(padrao.equalsIgnoreCase("sn")) {
-                    System.out.println("sn: "+padrao.equalsIgnoreCase("sn"));
+                    //System.out.println("sn: "+padrao.equalsIgnoreCase("sn"));
                     Cadastro pessoa = new Cadastro(nome, idade, false);
                     listaCadastroIncompleto.add(pessoa);
                 }
                 if(padrao.equalsIgnoreCase("ns")){
-                    System.out.println("ns: "+padrao.equalsIgnoreCase("ns"));
+                    //System.out.println("ns: "+padrao.equalsIgnoreCase("ns"));
                     Cadastro pessoa = new Cadastro(nome, cargo, false);
                     listaCadastroIncompleto.add(pessoa);
                 }
                 if(padrao.equalsIgnoreCase("nn")){
-                    System.out.println("nn: "+padrao.equalsIgnoreCase("nn"));
+                    //System.out.println("nn: "+padrao.equalsIgnoreCase("nn"));
                     Cadastro pessoa = new Cadastro(nome, false);
                     listaCadastroIncompleto.addLast(pessoa);
                 }
@@ -83,7 +93,6 @@ public class Main {
                 System.out.println(n);
             }
         }
-
     }
 }
 class Menu {
@@ -104,27 +113,27 @@ class Cadastro {
         this.idade = idade;
         this.cargo = cargo;
         this.ativo = ativo;
-        i++;
+
     }
 
     public Cadastro (String nome, int idade, boolean ativo){
         this.nome = nome;
         this.idade = idade;
         this.ativo = ativo;
-        i++;
+
     }
 
     public Cadastro (String nome, String cargo, boolean ativo) {
         this.nome = nome;
         this.cargo = cargo;
         this.ativo = ativo;
-        i++;
+
     }
 
     public Cadastro (String nome, boolean ativo){
         this.nome = nome;
         this.ativo = ativo;
-        i++;
+
     }
 
     public Cadastro (String nome){
@@ -165,11 +174,11 @@ class Cadastro {
 
     @Override
     public String toString() {
-        return "Pessoa" + i + "[" +
+        return "[ " +
                 "nome: " + nome +
                 ", idade: " + idade +
                 ", cargo: " + cargo +
                 ", ativo: " + ativo +
-                "]";
+                " ]";
     }
 }
